@@ -1,0 +1,177 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aqua;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    font-size: 3rem;
+    margin-top: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 450px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.box {
+    height: 120px;
+    width: 100%;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    font-size: 2rem;
+    font-weight: 600;
+    color: brown;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    aspect-ratio: 1; /* Ensures the boxes remain square */
+}
+
+.reset-button, .start-game {
+    height: 50px;
+    width: 120px;
+    margin-top: 30px;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    background-color: black;
+    color: aliceblue;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reset-button:hover, .start-game:hover {
+    background-color: darkgray;
+}
+
+.msg-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.winner {
+    font-size: 5rem;
+    color: brown;
+    font-weight: 900;
+    font-family: math;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        font-size: 2.5rem;
+    }
+    
+    .game {
+        max-width: 360px;
+        gap: 0.8rem;
+    }
+    
+    .box {
+        height: 100px;
+        font-size: 1.8rem;
+    }
+
+    .winner {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 2rem;
+    }
+    
+    .game {
+        max-width: 300px;
+        gap: 0.5rem;
+    }
+    
+    .box {
+        height: 80px;
+        font-size: 1.5rem;
+    }
+
+    .reset-button, .start-game {
+        height: 45px;
+        width: 100px;
+        font-size: 0.9rem;
+    }
+
+    .winner {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .header {
+        font-size: 1.5rem;
+    }
+    
+    .game {
+        max-width: 240px;
+        gap: 0.3rem;
+    }
+    
+    .box {
+        height: 60px;
+        font-size: 1.2rem;
+    }
+
+    .reset-button, .start-game {
+        height: 40px;
+        width: 90px;
+        font-size: 0.8rem;
+    }
+
+    .winner {
+        font-size: 1.5rem;
+    }
+}
